@@ -210,9 +210,9 @@ turned(E, D, t) :- turned(E, D, t-1).
 
 % Use this line to call the script :
 
-% clingo ../encodings/incmode.lp ../encodings/sequential.lp task.lp instance06.lp --stats
-% clingo ../encodings/incmode.lp ../encodings/sequential.lp task.lp instance07.lp --stats
-% clingo ../encodings/incmode.lp ../encodings/sequential.lp task.lp instance08.lp --stats
+% clingo ../encodings/incmode.lp ../encodings/sequential.lp elevator_conformant_planning.lp instance06.lp --stats
+% clingo ../encodings/incmode.lp ../encodings/sequential.lp elevator_conformant_planning.lp instance07.lp --stats
+% clingo ../encodings/incmode.lp ../encodings/sequential.lp elevator_conformant_planning.lp instance08.lp --stats
 
 %* EXAMPLE CALLS:
 
