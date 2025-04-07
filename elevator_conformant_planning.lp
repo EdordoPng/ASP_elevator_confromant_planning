@@ -1,10 +1,6 @@
 
 % Authors : Diana Edoardo
 
-% Note : Inside the folder there are new input scripts : instance06, instance07, instance08 
-% They were created to better test the sequential encoding in a resonable amount of time  
-
-
 % auxiliary predicates
 
 direction(1;-1).
