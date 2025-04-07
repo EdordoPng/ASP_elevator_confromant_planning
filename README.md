@@ -34,6 +34,8 @@ This ASP encoding models the **conformant planning logic for multiple elevators*
 
 This repository builds up the final model step by step through several tasks:
 
+
+
 ### 🧱 Task 1 – Initial States
 
 Define the **initial states** such that:
@@ -41,6 +43,8 @@ Define the **initial states** such that:
 - Requests (`call`, `deliver`) can be either active (`1`) or inactive (`0`)
 
 📌 This abstracts the initial uncertainty, allowing the conformant planner to consider **all possible elevator starting positions**.
+
+
 
 ### 🎯 Task 2 – Goal Definition
 
@@ -66,6 +70,8 @@ The elevator being on the current floor (precondition)
 
 The target floor being valid (postcondition)
 
+
+
 ### 🤝 Task 4 – Serving Logic
 Define the serve(E) action with three cases:
 
@@ -80,7 +86,9 @@ If both a call and delivery exist, delivery may or may not be served
 
 📌 Uses conditional effects and preconditions based on floor status
 
-### 🧠 Bonus Task – Directional Control
+
+
+### 🧠 Task 5 – Directional Control
 Add control logic to prevent elevators from turning back after already reversing direction.
 
 If an elevator has already moved up and then down, it can no longer go up again.
@@ -88,12 +96,12 @@ If an elevator has already moved up and then down, it can no longer go up again.
 
 ## 📁 Repository Structure
 File / Folder	Description
-elevator_conformant_planning.lp	Main logic for conformant elevator planning
-instance01.lp – instance08.lp	Example problem instances for testing
-../encodings/incmode.lp	Incremental solving control (Clingo)
-../encodings/sequential.lp	Time-step based planning model
-../encodings/forall.lp	Universal goal enforcement (all goals must be achieved)
-../encodings/exists.lp	Existential goal enforcement (some goal alternatives)
+elevator_conformant_planning.lp	                      Main logic for conformant elevator planning
+instance01.lp – instance08.lp	                        Example problem instances for testing
+../encodings/incmode.lp	                              Incremental solving control (Clingo)
+../encodings/sequential.lp	                          Time-step based planning model
+../encodings/forall.lp	                              Universal goal enforcement (all goals must be achieved)
+../encodings/exists.lp	                              Existential goal enforcement (some goal alternatives)
 
 ## 🧪 How to Run
 Make sure you have Clingo installed.
@@ -112,6 +120,7 @@ clingo ../encodings/incmode.lp ../encodings/forall.lp elevator_conformant_planni
 clingo ../encodings/incmode.lp ../encodings/exists.lp elevator_conformant_planning.lp instance04.
 ```
 
+
 ## 📊 Conformant Planning vs Classical Planning
 
 Feature	                            Conformant Planning              	Classical Planning
@@ -122,11 +131,14 @@ Use Case	                          Real-world uncertainty	          Simulations,
 
 
 ## 🧠 Key Learnings
-ASP enables complex planning and reasoning under uncertainty
 
-Conditional effects and non-determinism are core tools in conformant planning
+ASP enables complex planning and reasoning under uncertainty.
 
-Adding control knowledge helps optimize and restrict the solution space
+Conditional effects and non-determinism are core tools in conformant planning.
+
+Adding control knowledge helps optimize and restrict the solution space.
+
+---
 
 ## Related Project
 If you're interested in the previous version (classical planning without uncertainty), check it out here: https://github.com/EdordoPng/ASP_elevator/tree/main
