@@ -1,7 +1,5 @@
 # ASP_elevator_confromant_planning
 
-# 🛗 ASP_Elevator_Conformant_Planning
-
 This repository demonstrates how to solve a **conformant planning problem** using **Answer Set Programming (ASP)** in the context of elevator control systems, leveraging the **Clingo** solver.
 
 ---
