@@ -98,9 +98,8 @@ instance01.lp – instance08.lp	Example problem instances for testing
 ../encodings/exists.lp	Existential goal enforcement (some goal alternatives)
 
 ## 🧪 How to Run
-Make sure you have Clingo installed.  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA LINK REPO CLINGO
-
-Run the planner with different instance files using:
+Make sure you have Clingo installed.
+Run the planner with different instance files using: https://github.com/potassco/clingo.git
 
 ```bash
 clingo ../encodings/incmode.lp ../encodings/sequential.lp elevator_conformant_planning.lp instance06.lp --stats
@@ -116,11 +115,12 @@ clingo ../encodings/incmode.lp ../encodings/exists.lp elevator_conformant_planni
 ```
 
 ## 📊 Conformant Planning vs Classical Planning
-Feature	Conformant Planning	Classical Planning
-Initial State Known?	❌ No (uncertainty)	✅ Yes
-Guarantees for All Scenarios?	✅ Yes	❌ Only works for known state
-Plan Robustness	✅ Very high	⚠️ Fragile to state changes
-Use Case	Real-world uncertainty	Simulations, static systems
+
+Feature	                            Conformant Planning              	Classical Planning
+Initial State Known?	              ❌ No (uncertainty)	              ✅ Yes
+Guarantees for All Scenarios?	      ✅ Yes	                          ❌ Only works for known state
+Plan Robustness	                    ✅ Very high	                    ⚠️ Fragile to state changes
+Use Case	                          Real-world uncertainty	          Simulations, static systems
 
 
 ## 🧠 Key Learnings
@@ -131,4 +131,4 @@ Conditional effects and non-determinism are core tools in conformant planning
 Adding control knowledge helps optimize and restrict the solution space
 
 ## Related Project
-If you're interested in the previous version (classical planning without uncertainty), check it out here:
+If you're interested in the previous version (classical planning without uncertainty), check it out here: https://github.com/EdordoPng/ASP_elevator/tree/main
