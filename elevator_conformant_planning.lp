@@ -155,16 +155,6 @@ precondition(if_active_call(E,F), call(F), 1) :- elevator(E), floor(F).
 
 % #########################################################################
 
-% I had sequential plans in mind, where the moves in different directions may have serve actions in-between 
-% and we don't know whether an elevator E moves in a direction D at the previous time t-1 and in the opposite
-% direction -D at time t. 
-% Rather, it could be that the move in direction D is at time t-2, then a serve at time t-1, and the move in the opposite direction -D at time t. 
-
-% In general, it shouldn't matter how big the time difference between moves in the different directions D and -D is, 
-% but the turn should be detected in any case.
-
-% This issue isn't yet addressed by the rules written below, but the following rules may be a starting point for completion:
-
 moved(E, D, t) :- occurs(move(E, D), t-1).
 moved(E, D, t) :- moved(E, D, t-1).
 
